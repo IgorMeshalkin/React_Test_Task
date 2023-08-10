@@ -1,0 +1,43 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.main.active {
+    animation: startLoading .3s ease-in-out;
+    opacity: .8;
+    pointer-events: auto;
+}
+
+.main.notActive {
+    animation: finishLoading .3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes startLoading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+@keyframes finishLoading {
+    0% {
+        opacity: .8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
