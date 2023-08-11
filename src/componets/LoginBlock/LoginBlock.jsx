@@ -6,7 +6,7 @@ import {startLoadingAuthorization, successfulAuthorization} from "../../store/sl
 import {useNavigate} from "react-router-dom";
 
 const LoginBlock = () => {
-    //переменная для перемещения между страницами
+    //переменная для переключения между страницами
     const navigate = useNavigate();
     //диспатч для вызова редюсеров авторизации
     const dispatch = useDispatch();

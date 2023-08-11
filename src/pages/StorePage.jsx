@@ -7,7 +7,7 @@ const StorePage = () => {
     //состояние авторизации
     const authorization = useSelector(state => state.authorization.authorizationState)
 
-    //переменная для перемещения между страницами
+    //переменная для переключения между страницами
     const navigate = useNavigate();
 
     //в случае если пользователь не авторизован отправляет его на страницу авторизации

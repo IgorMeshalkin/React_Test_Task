@@ -4,7 +4,7 @@ import LoginBlock from "../componets/LoginBlock/LoginBlock";
 
 const LoginPage = () => {
     return (
-        <div className="darkBackground">
+        <div className="background dark">
             <LoginBlock/>
         </div>
     );
