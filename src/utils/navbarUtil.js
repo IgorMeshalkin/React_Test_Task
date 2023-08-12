@@ -1,3 +1,4 @@
+//возвращает массив кнопок для навигационной панели.
 export const getNavbarButtons = () => {
     return [
         {

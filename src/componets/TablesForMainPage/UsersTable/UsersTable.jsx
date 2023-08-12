@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import styles from './UsersTable.module.css'
-import UsersAPI from "../../api/UsersAPI";
-import {useAPI} from "../../hooks/useAPI";
-import Loader from "../Loader/Loader";
+import UsersAPI from "../../../api/UsersAPI";
+import {useAPI} from "../../../hooks/useAPI";
 import {Pagination, Table} from "antd";
-import {getUsersTableColumns, prepareForTable} from "../../utils/usersUtil";
+import Loader from "../../Loader/Loader";
+import {getUsersTableColumns, prepareUsersArrayForTable} from "../../../utils/usersUtil";
+import {USERS_LIST_TITLE} from "../../../properties/mainPageProperties";
 
 const UsersTable = () => {
     //массив юзеров для отображения в таблице
@@ -19,7 +20,7 @@ const UsersTable = () => {
     //возвращает функцию, состояние загрузки и текст ошибки при наличии таковой.
     const [fetchUsers, isUsersLoading, usersLoadingError] = useAPI(async () => {
         const response = await UsersAPI.get(limit, offset)
-        setUsers(prepareForTable(response.data.items))
+        setUsers(prepareUsersArrayForTable(response.data.items))
         setTotalPaginationPages(Math.ceil(response.data.total / limit) * 10)
     })
 
@@ -52,7 +53,7 @@ const UsersTable = () => {
 
     return (
         <div className={styles.main}>
-            <span className={styles.title}>Список пользователей</span>
+            <span className={styles.title}>{USERS_LIST_TITLE}</span>
             <Table
                 columns={getUsersTableColumns(onDeleteButtonClick)}
                 dataSource={users}
@@ -65,7 +66,10 @@ const UsersTable = () => {
             {
                 isUsersLoading &&
                 <div className={styles.loaderContainer}>
-                    <Loader/>
+                    <Loader
+                        isIncluded={true}
+                        isActive={isUsersLoading}
+                    />
                 </div>
             }
         </div>

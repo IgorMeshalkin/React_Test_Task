@@ -1,7 +1,9 @@
 import React from "react";
 import {Button} from "antd";
+import {dateTimeFormat} from "./dateTimeStringUtil";
 
-export const prepareForTable = (usersByAPI) => {
+//возвращает список юзеров со свойством key (= id), необходимым для корректной работы таблицы Ant Design.
+export const prepareUsersArrayForTable = (usersByAPI) => {
     const result = [];
     usersByAPI.forEach(user => {
         result.push({...user, key: user.id})
@@ -9,6 +11,7 @@ export const prepareForTable = (usersByAPI) => {
     return result
 }
 
+//возвращает структуру таблицы юзеров в виде массива объектов.
 export const getUsersTableColumns = (deleteButtonAction) => {
     return [
         {
@@ -49,21 +52,4 @@ export const getUsersTableColumns = (deleteButtonAction) => {
             ),
         },
     ];
-}
-
-const dateTimeFormat = (unixTimestamp) => {
-    const date = new Date(unixTimestamp * 1000);
-    return addZero(date.getDate())
-        + '.' + addZero((date.getMonth() + 1))
-        + '.' + date.getFullYear()
-        + ' ' + addZero(date.getHours())
-        + ':' + addZero(date.getMinutes());
-}
-
-const addZero = (num) => {
-    if (num < 10) {
-        return '0' + num;
-    } else {
-        return num;
-    }
 }

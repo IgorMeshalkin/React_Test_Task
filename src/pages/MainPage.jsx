@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
-import UsersTable from "../componets/UsersTable/UsersTable";
+import UsersTable from "../componets/TablesForMainPage/UsersTable/UsersTable";
+import EventsTable from "../componets/TablesForMainPage/EventsTable/EventsTable";
 
 const MainPage = () => {
     //состояние авторизации
@@ -23,7 +24,7 @@ const MainPage = () => {
                 <UsersTable/>
             </div>
             <div className="halfScreenContainer">
-
+                <EventsTable/>
             </div>
         </div>
     );

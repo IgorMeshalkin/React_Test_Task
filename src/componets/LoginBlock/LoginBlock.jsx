@@ -4,6 +4,18 @@ import {Button, Form, Input} from "antd";
 import {useDispatch} from "react-redux";
 import {startLoadingAuthorization, successfulAuthorization} from "../../store/slices/authorizationSlice";
 import {useNavigate} from "react-router-dom";
+import {
+    AUTHORIZATION_TITLE,
+    CAPITAL_LETTER_MESSAGE,
+    EMAIL_TITLE,
+    EMPTY_EMAIL_MESSAGE,
+    EMPTY_PASSWORD_MESSAGE,
+    NOT_CORRECT_EMAIL_MESSAGE,
+    PASSWORD_MIN_LENGTH,
+    PASSWORD_TITLE,
+    SHORT_PASSWORD_MESSAGE,
+    SUBMIT_BUTTON_TEXT
+} from "../../properties/loginPageProperties";
 
 const LoginBlock = () => {
     //переменная для переключения между страницами
@@ -38,7 +50,7 @@ const LoginBlock = () => {
 
     return (
         <div className={styles.main}>
-            <span className={styles.title}>Авторизация</span>
+            <span className={styles.title}>{AUTHORIZATION_TITLE}</span>
             <Form
                 name="basic"
                 style={{
@@ -48,23 +60,23 @@ const LoginBlock = () => {
                 layout="vertical"
             >
                 <Form.Item
-                    label={<label style={{color: "white"}}>Электронная почта</label>}
+                    label={<label style={{color: "white"}}>{EMAIL_TITLE}</label>}
                     name="email"
                     rules={[
-                        {required: true, message: 'Введите электронную почту'},
-                        {pattern: '[a-z0-9]+@[a-z]+\\.[a-z]{2,3}', message: 'Не корректный адрес электронно почты'},
+                        {required: true, message: EMPTY_EMAIL_MESSAGE},
+                        {pattern: '[a-z0-9]+@[a-z]+\\.[a-z]{2,3}', message: NOT_CORRECT_EMAIL_MESSAGE},
                     ]}
                 >
                     <Input/>
                 </Form.Item>
 
                 <Form.Item
-                    label={<label style={{color: "white"}}>Пароль</label>}
+                    label={<label style={{color: "white"}}>{PASSWORD_TITLE}</label>}
                     name="password"
                     rules={[
-                        {required: true, message: 'Введите ваш пароль'},
-                        {pattern: '[\\w|\\W]{8}', message: 'В пароле должно быть не меньше 8-ми символов'},
-                        {pattern: '[A-ZА-Я]', message: 'В пароле должна быть хотя бы одна заглавная буква'}
+                        {required: true, message: EMPTY_PASSWORD_MESSAGE},
+                        {pattern: '[\\w|\\W]{' + PASSWORD_MIN_LENGTH + '}', message: SHORT_PASSWORD_MESSAGE},
+                        {pattern: '[A-ZА-Я]', message: CAPITAL_LETTER_MESSAGE}
                     ]}
                 >
                     <Input.Password
@@ -75,7 +87,7 @@ const LoginBlock = () => {
 
                 <Form.Item wrapperCol={{offset: 8, span: 16}}>
                     <Button type="primary" htmlType="submit">
-                        Авторизация
+                        {SUBMIT_BUTTON_TEXT}
                     </Button>
                 </Form.Item>
             </Form>

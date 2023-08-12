@@ -1,0 +1,33 @@
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.eventsContainer {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+}
+
+.eventsContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.eventsContainer::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #d2d2d2;
+}
