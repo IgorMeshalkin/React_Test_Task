@@ -1,0 +1,45 @@
+:root {
+    --left-side: #d6fff0;
+    --right-side: #ebff52;
+}
+
+.main {
+    height: 36px;
+    width: 160px;
+    border-radius: 18px;
+    background: linear-gradient(to right, var(--left-side), var(--right-side));
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.glare {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background-color: var(--white);
+    height: 100%;
+    width: 2px;
+    box-shadow: 0 0 4px 4px var(--white);
+    opacity: .6;
+}
+
+.main:hover .glare {
+    animation: glareRun 1s ease-in-out;
+}
+
+@keyframes glareRun {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200px);
+    }
+}
+

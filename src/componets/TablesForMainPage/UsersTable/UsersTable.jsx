@@ -3,7 +3,7 @@ import styles from './UsersTable.module.css'
 import UsersAPI from "../../../api/UsersAPI";
 import {useAPI} from "../../../hooks/useAPI";
 import {Pagination, Table} from "antd";
-import Loader from "../../Loader/Loader";
+import Loader from "../../../ui/Loader/Loader";
 import {getUsersTableColumns, prepareUsersArrayForTable} from "../../../utils/usersUtil";
 import {USERS_LIST_TITLE} from "../../../properties/mainPageProperties";
 
@@ -53,7 +53,7 @@ const UsersTable = () => {
 
     return (
         <div className={styles.main}>
-            <span className={styles.title}>{USERS_LIST_TITLE}</span>
+            <span className="title">{USERS_LIST_TITLE}</span>
             <Table
                 columns={getUsersTableColumns(onDeleteButtonClick)}
                 dataSource={users}

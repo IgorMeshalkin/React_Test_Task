@@ -1,0 +1,96 @@
+.main {
+    height: 230px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid white;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.productImage {
+    width: 210px;
+}
+
+.discount {
+    height: 28px;
+    width: 60px;
+    background-color: rgba(var(--light-violet-rgba), .9);
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-violet);
+    font-weight: bold;
+    transition: .3s;
+}
+
+.quickViewContainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quickViewButton {
+    height: 40px;
+    width: 140px;
+    background-color: var(--white);
+    opacity: .2;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main:hover .quickViewButton {
+    opacity: .7;
+}
+
+.discount:hover {
+    animation: shiver 2s infinite;
+    background-color: rgba(var(--light-violet-rgba), 1);
+}
+
+@keyframes shiver {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(-5deg);
+    }
+    20% {
+        transform: rotate(5deg);
+    }
+    30% {
+        transform: rotate(-5deg);
+    }
+    40% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    70% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

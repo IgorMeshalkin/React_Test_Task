@@ -2,7 +2,7 @@ import {Route, Routes, useLocation} from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/LoginPage";
 import StorePage from "./pages/StorePage";
-import Loader from "./componets/Loader/Loader";
+import Loader from "./ui/Loader/Loader";
 import React, {useEffect} from "react";
 import Navbar from "./componets/Navbar/Navbar";
 import {useDispatch, useSelector} from "react-redux";

@@ -11,7 +11,7 @@ const EventsTable = () => {
 
     return (
         <div className={styles.main}>
-            <span className={styles.title}>{EVENTS_TITLE}</span>
+            <span className="title">{EVENTS_TITLE}</span>
             <div className={styles.eventsContainer}>
                 <Table
                     columns={getEventsTableColumns()}

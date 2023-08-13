@@ -1,0 +1,44 @@
+.heart {
+    font-size: 40px;
+    color: var(--dark-violet);
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.heart.liked {
+    animation: liked .5s ease-in-out;
+}
+
+.heart.disLiked {
+    animation: disLiked .5s ease-in-out;
+}
+
+@keyframes liked {
+    0% {
+        transform: scale(1) translateY(-4px);
+    }
+    30% {
+        transform: scale(1.2) translateY(-6px);
+    }
+    70% {
+        transform: scale(1.2) translateY(-6px);
+    }
+    100% {
+        transform: scale(1) translateY(-4px);
+    }
+}
+
+@keyframes disLiked {
+    0% {
+        transform: scale(1) translateY(-4px);
+    }
+    30% {
+        transform: scale(.9) translateY(-2px);
+    }
+    70% {
+        transform: scale(.9) translateY(-2px);
+    }
+    100% {
+        transform: scale(1) translateY(-4px);
+    }
+}

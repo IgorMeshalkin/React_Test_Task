@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
-import {useEffect} from "react";
+import StoreBlock from "../componets/StoreBlock/StoreBlock";
 
 const StorePage = () => {
     //состояние авторизации
@@ -18,8 +18,8 @@ const StorePage = () => {
     })
 
     return (
-        <div>
-            StorePage
+        <div className="background">
+            <StoreBlock/>
         </div>
     );
 };

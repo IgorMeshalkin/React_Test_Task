@@ -1,6 +1,7 @@
 import React from "react";
 import {Button} from "antd";
 import {dateTimeFormat} from "./dateTimeStringUtil";
+import {DELETE_USER_BUTTON_TEXT} from "../properties/mainPageProperties";
 
 //возвращает список юзеров со свойством key (= id), необходимым для корректной работы таблицы Ant Design.
 export const prepareUsersArrayForTable = (usersByAPI) => {
@@ -44,10 +45,9 @@ export const getUsersTableColumns = (deleteButtonAction) => {
             render: (record) => (
                 <Button
                     type="primary"
-                    style={{backgroundColor: '#f43333'}}
                     onClick={() => deleteButtonAction(record.id)}
-                >
-                    Удалить
+                    danger>
+                    {DELETE_USER_BUTTON_TEXT}
                 </Button>
             ),
         },
