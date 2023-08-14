@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     overflow-x: hidden;
     overflow-y: scroll;
+    scrollbar-width: thin;
 }
 
 .itemsContainer::-webkit-scrollbar {
@@ -26,5 +27,5 @@
 
 .itemsContainer::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: #d2d2d2;
+    background-color: var(--light-grey);
 }

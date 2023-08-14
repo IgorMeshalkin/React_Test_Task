@@ -13,6 +13,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     margin-bottom: 30px;
+    scrollbar-width: thin;
 }
 
 .eventsContainer::-webkit-scrollbar {
@@ -21,5 +22,5 @@
 
 .eventsContainer::-webkit-scrollbar-thumb {
     border-radius: 4px;
-    background-color: #d2d2d2;
+    background-color: var(--light-grey);
 }
