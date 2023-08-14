@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Тестовое задание на должность Fronend developer.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
+Приложение состоит из трёх страниц:<br><br>
+1- Страница авторизации. <br> Необходимо ввести электронную почту и пароль. Адрес электронной почты должен быть корректный, пароль должен содержать не меньше 8-ми символов и хотя бы одну заглавную букву. Если верификация пройдена пользователь переходит на главную страницу. <br><br>
+2- Главная страница представляет из себя две таблицы. <br> В левой таблице показаны пользователи. Записи выводятся по 5 и предусмотрена пагинация. Для получения данных в левую таблицу используется протокол http. <br> В правой таблице отражены события которые происходят на сервере. Для получения событий используется протокол Websocket.<br><br>
+3- Магазин. <br> В специальных блоках отражена информация о товарах. Блоки сверстаны таким образом что если для данного товара не предусмотрена рассрочка, остальные строки в блоке адаптируются и не оставляют "пустое" место.<br>
 
-## Available Scripts
+С действующим приложением можно ознакомиться по ссылке:<br>
+https://64d8cc01d2d5de12f3d9801f--kaleidoscopic-raindrop-6632e4.netlify.app/<br><br>
 
-In the project directory, you can run:
 
-### `npm start`
+## Внешний вид
+![111](https://github.com/IgorMeshalkin/React_Test_Task/assets/97287038/aa76559e-4fb2-4a87-a85c-1895524f34a5)
+![222](https://github.com/IgorMeshalkin/React_Test_Task/assets/97287038/455ed943-825c-4634-805b-8a570fca63be)
+![333](https://github.com/IgorMeshalkin/React_Test_Task/assets/97287038/b8cc690d-4394-4a0c-b1ae-3d0f4fdd036c)
+<br><br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Технологии
+React<br>
+Redux-toolkit<br>
+Axios<br>
+Websocket<br>
+Ant-Design<br><br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Контакты
+Меня зовут Игорь Мешалкин, <br> буду рад замечаниям и предложениям по поводу своей работы.   <br>
+Telegram: @IgorMeshalkin   <br>
+Email: 770190@bk.ru
